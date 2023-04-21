@@ -12,22 +12,23 @@ def turn_down():
     t.right(2)
 
 def fire():
+    ang = t.heading()
 
     while t.ycor() > 0: # y좌표가 0보다 크면, 포탄이 땅 위에 있는 동안
-        t.forward(75)
-        t.right(75)
+        t.forward(15)
+        t.right(5)
 
-d = t.distance(target, 0)
-t.sety(random.randint(10, 100)) # 성공 또는 실패를 표시할 위치
-if d < 75: # 명중 - 목표 지점에 닿음
-    t.color('blue')
-    t.write('Good!', False, "center", ("", 15))
-else: # 목표 지점에 닿지 않았을 때
-    t.color('red', False, "center", ("", 15))
-    t.write('Bad!')
-    t.color('black')
-    t.goto(-200, 10)
-    t.setheading(ang) # 기억된 머리 각도 설정
+    d = t.distance(target, 0)
+    t.sety(random.randint(10, 100)) # 성공 또는 실패를 표시할 위치
+    if d < 75: # 명중 - 목표 지점에 닿음
+        t.color('blue')
+        t.write('Good!', False, "center", ("", 15))
+    else: # 목표 지점에 닿지 않았을 때
+        t.color('red', False, "center", ("", 15))
+        t.write('Bad!')
+        t.color('black')
+        t.goto(-200, 10)
+        t.setheading(ang) # 기억된 머리 각도 설정
 
 # 땅 그리기
 t.goto(-300, 0)
