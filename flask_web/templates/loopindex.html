@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop index 예제</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>loop index</h1>
+        </header>
+        <section>
+            {% comment %} loop.index는 순번을 출력해줌(1번에서 시작) {% endcomment %}
+            <ul>
+                {% for item in items %}
+                <li>{{ loop.index }} - {{ item }}</li>
+                {% endfor %}
+            </ul>
+
+            <ul>
+                {% for item in items %}
+                    {% if loop.index < 3 %}
+                <li>{{ loop.index }} - {{ item }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
