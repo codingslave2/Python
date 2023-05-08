@@ -1,0 +1,6 @@
+명령프롬포드 구동
+
+
+pyinstaller --noconfirm --onefile --windowed --add-data "C:\이미지경로;," "C:\프로그램 구동 코드 경로"
+
+= 이미지를 넣은 파이썬 파일 exe 파일로 만들기
