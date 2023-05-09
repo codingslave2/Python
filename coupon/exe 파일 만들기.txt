@@ -1,5 +1,8 @@
 명령프롬포드 구동
 
+pyinstaller --onefile --noconsole 파일명
+
+= 파일 만들기
 
 pyinstaller --noconfirm --onefile --windowed --add-data "C:\이미지경로;," "C:\프로그램 구동 코드 경로"
 
